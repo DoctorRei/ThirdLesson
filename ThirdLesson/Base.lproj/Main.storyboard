@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-Iz-ayP">
-                                <rect key="frame" x="16" y="99.000000000000014" width="361" height="161.33333333333337"/>
+                                <rect key="frame" x="16" y="99" width="361" height="309.66666666666669"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Td-IL-CId">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
@@ -38,7 +38,23 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Aiw-5B-Pa8">
                                         <rect key="frame" x="-2" y="131.33333333333334" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="Eyw-Bz-Se0"/>
+                                        </connections>
                                     </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Ht-m8-vW8">
+                                        <rect key="frame" x="0.0" y="201.33333333333331" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uey-tF-Y7w">
+                                        <rect key="frame" x="0.0" y="275.33333333333331" width="361" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                        <connections>
+                                            <action selector="tapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KM-zm-5wM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -53,6 +69,8 @@
                     <connections>
                         <outlet property="mainLabel" destination="Wlt-xT-Bgs" id="FNs-K4-iUf"/>
                         <outlet property="segmentedControl" destination="9Td-IL-CId" id="9Xl-nO-jHU"/>
+                        <outlet property="slider" destination="Aiw-5B-Pa8" id="I5b-vk-uP1"/>
+                        <outlet property="textFieldFirst" destination="2Ht-m8-vW8" id="cUF-V7-Tnc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
