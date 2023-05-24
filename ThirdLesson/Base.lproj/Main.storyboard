@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-Iz-ayP">
-                                <rect key="frame" x="16" y="99" width="361" height="309.66666666666669"/>
+                                <rect key="frame" x="16" y="99" width="361" height="565.66666666666663"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Td-IL-CId">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
@@ -55,6 +55,12 @@
                                             <action selector="tapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KM-zm-5wM"/>
                                         </connections>
                                     </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-9W-M9F">
+                                        <rect key="frame" x="0.0" y="350" width="361" height="216"/>
+                                        <connections>
+                                            <action selector="dateWheel" destination="BYZ-38-t0r" eventType="valueChanged" id="vOS-WY-wsK"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -67,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateWheelText" destination="uxm-9W-M9F" id="PRa-F2-33t"/>
                         <outlet property="mainLabel" destination="Wlt-xT-Bgs" id="FNs-K4-iUf"/>
                         <outlet property="segmentedControl" destination="9Td-IL-CId" id="9Xl-nO-jHU"/>
                         <outlet property="slider" destination="Aiw-5B-Pa8" id="I5b-vk-uP1"/>

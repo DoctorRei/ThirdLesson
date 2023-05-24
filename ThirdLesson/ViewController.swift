@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var textFieldFirst: UITextField!
+    @IBOutlet var dateWheelText: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,9 @@ class ViewController: UIViewController {
             showAllert(withTitle: "Sry", andMessage: "We need your name")
         }
         mainLabel.text = textFieldFirst.text
+    }
+    @IBAction func dateWheel() {
+        mainLabel.text = dateWheelText.date.formatted()
     }
     
     
